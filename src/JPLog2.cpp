@@ -4,8 +4,6 @@
   Copyright (c) 2025 Gonzalo Rojas
   This plugin is free to use, modify, and distribute.
   Provided "as is" without any warranty.
-
-  https://github.com/NatronGitHub/openfx-misc/blob/master/Log2Lin/Log2Lin.cpp
 */
 
 #include "include/JPLog2.h"

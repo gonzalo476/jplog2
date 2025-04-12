@@ -1,5 +1,5 @@
 /*
-  GLinlog Plugin for Nuke
+  JPLog2 Plugin for Nuke
   ------------------------------
   Copyright (c) 2025 Gonzalo Rojas
   This plugin is free to use, modify, and distribute.

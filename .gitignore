@@ -1,0 +1,120 @@
+# C++ build files
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.dll
+*.exe
+*.out
+*.app
+*.dylib
+*.bundle
+
+# Debug files
+*.gch
+*.pch
+*.log
+*.stackdump
+*.debug
+
+# CMake build files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+build/
+Testing/
+CTestTestfile.cmake
+CTestCustom.cmake
+*.ninja
+Ninja.build
+compile_commands.json
+
+# CMake install files
+_install/
+
+# IDE-specific project and config files
+.idea/
+.vscode/
+*.code-workspace
+*.workspace
+
+# CLion (JetBrains) configuration
+*.iml
+cmake-build-debug/
+cmake-build-release/
+
+# Visual Studio Code config files
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+
+# Visual Studio project files
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.suo
+*.pdb
+*.idb
+*.ipch
+*.tlog
+*.lastbuildstate
+*.user
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.VC.opendb
+
+# Linux/macOS compiler generated files
+*.d
+*.lo
+*.la
+
+# OpenFX libraries and binary directories
+OFX/
+Bin/
+Lib/
+Plugins/
+*.ofx
+*.bundle
+*.dylib
+
+# OpenFX build files
+*.plugin
+*.ofx.bundle
+*.ofx.so
+*.ofx.dylib
+
+# Packaging generated files
+*.tar.gz
+*.zip
+*.rar
+*.7z
+
+# Test generated files
+*.testlog
+test-results.xml
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Temporary and backup files
+*.swp
+*.bak
+*.tmp
+*.old
+*.orig
+*.rej
+*~
+
+# OS temporary files
+*~
+\#*\#
+.\#*
+*.swp
+*.swo
+*.tmp
+*.DS_Store

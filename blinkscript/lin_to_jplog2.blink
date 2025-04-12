@@ -1,0 +1,40 @@
+inline float LinToJplog2(const float v, float lin_breakpoint,
+                         float log_breakpoint, float slope, float yint) {
+  if (v <= lin_breakpoint) {
+    return slope * v + yint;
+  } else {
+    return (log(v) / log(2.0f) + 10.5f) / 20.46f;
+  }
+}
+
+kernel lin_to_jplog2 : ImageComputationKernel<ePixelWise> {
+  Image<eRead, eAccessPoint, eEdgeClamped> src;
+  Image<eWrite> dst;
+
+param:
+  float lin_breakpoint;
+  float log_breakpoint;
+  float slope;
+  float yint;
+
+local:
+
+  void define() {
+    defineParam(lin_breakpoint, "linear breakpoint", 0.00680f);
+    defineParam(log_breakpoint, "log breakpoint", 0.16129f);
+    defineParam(slope, "slope", 10.367739f);
+    defineParam(yint, "yint", 0.0907775f);
+  }
+
+  void init() {}
+
+  void process() {
+    SampleType(src) input = src();
+
+    float r = LinToJplog2(input.x, lin_breakpoint, log_breakpoint, slope, yint);
+    float g = LinToJplog2(input.y, lin_breakpoint, log_breakpoint, slope, yint);
+    float b = LinToJplog2(input.z, lin_breakpoint, log_breakpoint, slope, yint);
+
+    dst() = float4(r, g, b, input.w);
+  }
+};
